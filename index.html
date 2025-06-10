@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora de Primogemas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <h1>Calculadora de Primogemas</h1>
+
+  <form id="form">
+    <input type="number" id="primogemas" placeholder="Quantidade de Primogemas" required min="0" />
+    <button type="submit">Calcular Giros</button>
+  </form>
+
+  <p>Giros possíveis: <span id="resultado">0</span></p>
+  <button id="rodarTestesUnitBtn">Rodar Testes Unitarios</button>
+  <button id="rodarTestesComponentBtn">Rodar Testes Component</button>
+
+  <div id="testes-resultados"></div>
+
+  <script>
+    const form = document.getElementById('form');
+    const primogemasInput = document.getElementById('primogemas');
+    const resultado = document.getElementById('resultado');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const primogemas = Number(primogemasInput.value);
+      const giros = Math.floor(primogemas / 160);
+      resultado.textContent = giros;
+    });
+  </script>
+
+  <script src="src/rodarTestes.js"></script>
+  <script src="tests/unitario.test.js"></script>
+  <script src="tests/component.test.js"></script>
+</body>
+
+</html>
