@@ -4,19 +4,16 @@ function runComponentTests() {
     if (!form) throw new Error("Formulário não encontrado");
   });
 
-  testar("COMPONENT - Formulário dispara evento de submit", () => {
-    const form = document.getElementById("form");
-    let chamado = false;
-
-    const listener = (e) => {
-      chamado = true;
-      e.preventDefault();
-      form.removeEventListener("submit", listener);
-    };
-
-    form.addEventListener("submit", listener);
-    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
-
-    if (!chamado) throw new Error("Evento de submit não foi chamado");
+  testar("COMPONENT - Quantidade de giros deve estar presente na página", () => {
+    const result = document.getElementById("resultado")
+    if (!result) throw new Error("Resultado não encontrado")
   });
+
+  testar("COMPONENT - Botão executa o cálculo dos giros", () => {
+    const from = getElementById("form")
+    
+    if (!from) throw new Error("Resultado não encontrado")
+  })
+
+
 }

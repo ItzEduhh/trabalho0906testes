@@ -1,10 +1,143 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+/* Body e container principal */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f9faff; /* azul clarinho bem suave */
+  padding: 40px 20px;
+}
+
+/* Título */
+h1 {
+  color: #0a3d62; /* azul escuro */
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+/* Formulário */
+form#form {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Input de número */
+input#primogemas {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 1.1rem;
+  border: 2px solid #fd79a8; /* rosa */
+  border-radius: 8px;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+}
+
+input#primogemas:focus {
+  border-color: #0a3d62; /* azul escuro */
+  box-shadow: 0 0 8px rgba(10, 61, 98, 0.4);
+}
+
+/* Botão principal */
+button[type="submit"] {
+  background: #0984e3; /* azul claro */
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(9, 132, 227, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #065f9c; /* azul escuro mais intenso */
+  box-shadow: 0 6px 12px rgba(6, 95, 156, 0.6);
+}
+
+/* Parágrafo do resultado */
+p {
+  font-size: 1.2rem;
+  color: #30336b; /* azul escuro */
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Span do resultado */
+#resultado {
+  color: #fd79a8; /* rosa */
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* Container dos botões extras */
+#rodarTestesUnitBtn,
+#rodarTestesComponentBtn {
+  background: #fd79a8; /* rosa */
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 22px;
+  margin: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(253, 121, 168, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover para botões rosa */
+#rodarTestesUnitBtn:hover,
+#rodarTestesComponentBtn:hover {
+  background: #d63f74; /* rosa escuro */
+  box-shadow: 0 5px 10px rgba(214, 63, 116, 0.8);
+}
+
+/* Centralizando botões extras dentro do body */
+#rodarTestesUnitBtn,
+#rodarTestesComponentBtn {
+  display: inline-block;
+}
+
+/* Div dos resultados dos testes */
 #testes-resultados {
   white-space: pre-wrap;
-  background: #f0f0f0;
-  padding: 10px;
+  background: #dfe6e9; /* cinza clarinho */
+  padding: 15px 20px;
   margin-top: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #b2bec3;
   max-height: 300px;
   overflow-y: auto;
   font-family: monospace;
+  border-radius: 8px;
+  color: #2d3436;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: inset 0 0 10px #b2bec3;
+}
+
+/* Para garantir que tudo fique centralizado */
+body > * {
+  margin-left: auto;
+  margin-right: auto;
 }
