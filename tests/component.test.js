@@ -10,7 +10,6 @@ function runComponentTests() {
   });
 
   testar("COMPONENT - Botão calcular funciona", () => {
-
     const input = document.getElementById("primogemas")
     if (!input) throw new Error("Quantidade de primogemas não encontrado")
 
