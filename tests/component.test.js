@@ -9,11 +9,20 @@ function runComponentTests() {
     if (!result) throw new Error("Resultado não encontrado")
   });
 
-  testar("COMPONENT - Botão executa o cálculo dos giros", () => {
-    const from = getElementById("form")
+  testar("COMPONENT - Botão calcular funciona", () => {
+
+    const input = document.getElementById("primogemas")
+    if (!input) throw new Error("Quantidade de primogemas não encontrado")
+
+    input.value = 320
     
-    if (!from) throw new Error("Resultado não encontrado")
+    const form = document.getElementById("form")
+    const botao = form.querySelector('button[type="submit"]');
+    if (!botao) throw new Error("Botão calcular não encontrado")
+
+    botao.click()
+
+    const result = document.getElementById("resultado")
+    if (!result) throw new Error("Resultado não encontrado")
   })
-
-
 }
